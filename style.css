@@ -8,3 +8,42 @@ body{
 .join-area{
     background: #289BDE;
 }
+
+.ready-join{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.button{
+    text-align: end;
+}
+
+.bottom-slide img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+span.carousel-control-prev-icon{
+    background-color: #0dcaf0;
+}
+
+span.carousel-control-next-icon{
+    background-color: #0dcaf0;
+}
+
+@media screen and (max-width: 992px) {
+    .join-area{
+        width: 100%;
+        text-align: center;
+    }
+    .ready-join{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+}
