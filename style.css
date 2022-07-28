@@ -34,6 +34,24 @@ span.carousel-control-next-icon{
     background-color: #0dcaf0;
 }
 
+
+.social-icon i{
+    padding: 15px;
+}
+
+.pipe i{
+    color: #fff;
+}
+
+.link a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.link a:hover{
+    color: #0dcaf0;
+}
 @media screen and (max-width: 992px) {
     .join-area{
         width: 100%;

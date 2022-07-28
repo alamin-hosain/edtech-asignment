@@ -6,8 +6,8 @@
     <title>EdTech Third Assignment</title>
     <!-- Font awesome css here -->
     <script src="https://kit.fontawesome.com/3b75cf6316.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap Css Cdn here -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Bootstrap Css here -->
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
    
     <!-- Site main Css here -->
     <link rel="stylesheet" href="style.css">
@@ -48,6 +48,7 @@
           </div>
         </div>
       </nav>
+
 
       <!-- Slider Section start from here -->
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -91,7 +92,7 @@
     </header>
 
     <!-- main area start form heere -->
-    <main>
+    <main class="pb-5">
       <!-- Popular courses section start form here -->
       <section class="my-5">
         <div class="container">
@@ -232,12 +233,57 @@
                   <h1 class="mb-4">Ready to join?</h1>
                    <p class="mb-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 </div>
-                <div class="button">
+                <div class="button" data-bs-toggle="modal" data-bs-target="#reg-modal">
                   <a href="#" class="btn btn-light text-primary px-5 py-3 fs-5">Registration</a>
                 </div>
           </div>
         </div>
       </section>
+
+      <!-- modal itself -->
+      <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content p-5">
+            <div class="modal-header">
+              <h2 class="modal-title" id="modal-title">Sign Up | Get Free Trial</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+              <p>We would love to be in touch with you! Please sign up to receive emails from us!
+              </p>
+             
+              
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Enter Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="**************">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                <input type="phone" class="form-control" id="exampleFormControlInput1" placeholder="eg: +8801725345656">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Write why you want to join?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <input class="btn btn-info w-50 m-auto" type="submit" value="Create Account">
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Successfull Students meeting area -->
       <section class="py-5">
@@ -295,9 +341,9 @@
       </section>
 
       <!-- Students feedback area start here -->
-      <section class=" py-3">
+      <section class=" py-3 mb-5">
         <div class="container">
-          <div class="top-content text-center m-auto mb-5">
+          <div class="top-content text-center m-auto mb-5 w-75">
             <h1>Some Students Feedback</h1>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
           </div>
@@ -402,15 +448,115 @@
         </div>
       </section>
 
+      <!-- Faq Section Start Here -->
+      <section class="py-5 mb-5">
+        <div class="container">
+          <div class="top-content top-content text-center m-auto mb-5 w-75">
+            <h1>Frequently Asked Questions</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          </div>
+
+          <div class="accordion w-75 m-auto" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is difference between Flexbox and Grid?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <p>Grid and flexbox. The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is difference between Bootstrap and Tailwind?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <p>Bootstrap comes with a set of pre-styled responsive, mobile-first components that possess a definite UI kit. Tailwind CSS uses a set of utility classes to create a neat UI with more flexibility and uniqueness. Sites created using Bootstrap follow the generic pattern that makes them look identical.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What is box model in CSS?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>CSS Box Model is a module of CSS that defines the rectangular boxes—including their padding and margin—that are generated for elements and laid out according to the visual formatting model.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  What is semantic tags in HTML?
+
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>pecifies self-contained content, like illustrations, diagrams, photos, code listings, etc. <footer> Defines a footer for a document or section. <header> Specifies a header for a document or section.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
+        </div>
+      </section>
 
+      <!-- Trusted company section start here -->
+      <section py-5 mb-5>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 d-none d-lg-block">
+              <h1 class="mb-5">Trusted by over 800+ companies</h1>
+              <div class="companies">
+                <img class="me-4"  src="./images/company/company-1.png" alt="">
+                <img class="me-4" src="./images/company/company-2.png" alt="">
+                <img class="me-4" src="./images/company/company-3.png" alt="">
+                <img class="me-4" src="./images/company/company-4.png" alt="">
+                <img class="me-4" src="./images/company/company-5.png" alt="">
+                <img src="./images/company/company-6.png" alt="">
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </section>
 
     </main>
-    <!-- Boostrap Javascript here -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
+    <!-- footer sectino start here -->
+
+    <footer class="bg-dark text-white mt-5">
+      <div class="container text-center py-5">
+        <h1>Pro Coder Hub</h1>
+        <p>Office 41, Zawaya Buildin, Ghala Muscat, 
+          Sultanate of Oman</p>
+         <div class="link">
+          <a href="#">Privacy Policy</a>
+          <span class="pipe"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+          <a href="#">Terms of Use</a>
+         </div>
+         <div class="social mt-3">
+          <span class="social-icon"><i class="fa-brands fa-facebook"></i></span>
+          <span class="social-icon"><i class="fa-brands fa-github"></i></span>
+          <span class="social-icon"><i class="fa-brands fa-twitter"></i></span>
+          <span class="social-icon"><i class="fa-brands fa-linkedin"></i></span>
+
+         </div>
+      </div>
+    </footer>
+
+   <script src="./bootstrap/bootstrap.min.js"></script>
   </body>
 </html>
